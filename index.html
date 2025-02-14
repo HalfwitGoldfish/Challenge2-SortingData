@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Doing Stuff With Data</title>
+  </head>
+  <body class="bg-[url(/assets/blueprintpaper.jpg)] bg-center text-white">
+
+    <main class="flex flex-col justify-evenly h-[100vh] m-0">
+      <div class="flex justify-evenly">
+        <div class="flex flex-col py-[10px]">
+
+          <div class="py-[10px] flex justify-between">
+            
+            <div>
+              <h1>List of People</h1>
+            </div>
+
+            <div>
+              <div>
+                <p id="limitText"></p>
+              </div>
+              <div>
+                <input
+                  id="limitSlider"
+                  class="rounded-full bg-yellow-200"
+                  type="range"
+                  min="1"
+                  max="5"
+                  value="1"
+                  id="limit">
+              </div>
+            </div>
+
+          </div>
+  
+          <div class="grid">
+            <button id="sortById" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">ID &#x21e9;</p></button>
+            <div id="appendId" class="outline w-[86px]"></div>
+
+            <button id="sortByFirstName" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">First Name &#x21e9;</p></button>
+            <div id="appendFirstName" class="outline w-[137px]"></div>
+
+            <button id="sortByLastName" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">Last Name &#x21e9;</p></button>
+            <div id="appendLastName" class="outline w-[152px]"></div>
+
+            <button id="sortByEmail" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">Email &#x21e9;</p></button>
+            <div id="appendEmail" class="outline w-[311px]"></div>
+
+            <button id="sortByHeight" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">Height &#x21e9;</p></button>
+            <div id="appendHeight" class="outline w-[127px]"></div>
+
+            <button id="sortByAge" class="row-start-1 hover:cursor-pointer bg-blue-800 hover:bg-gray-800"><p class="py-[10px] outline">Age &#x21e9;</p></button>
+            <div id="appendAge" class="outline w-[89px]"></div>
+          </div>
+
+          <div id="paginationContainer" class="flex justify-center gap-2 mt-4">
+            <button id="prevPage" class="px-3 py-1 border rounded hover:cursor-pointer w-[90px]">Previous</button>
+            <span id="currentPageDisplay" class="px-3 py-1">Page 1</span>
+            <button id="nextPage" class="px-3 py-1 border rounded hover:cursor-pointer w-[90px]">Next</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/app.js"></script>
+  </body>
+</html>
